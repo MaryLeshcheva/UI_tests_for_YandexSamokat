@@ -29,6 +29,7 @@ public class MainPage {
         scroll(questionElement);
         questionElement.click();
         By answerLocator = By.id("accordion__panel-" + index);
+
         WebElement answerElement = driver.findElement(answerLocator);
         new WebDriverWait(driver, Duration.ofSeconds(WAIT_SECONDS_TIMEOUT))
                 .until(ExpectedConditions.textMatches(answerLocator, Pattern.compile(".+")));

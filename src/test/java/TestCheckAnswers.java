@@ -1,3 +1,4 @@
+import config.AppConfig;
 import expansion.WebDriverFactory;
 import org.junit.After;
 import org.junit.Before;
@@ -38,6 +39,7 @@ public class TestCheckAnswers {
     @Before
     public void setup() {
         driver = WebDriverFactory.get();
+        driver.navigate().to(AppConfig.URL);
     }
 
     @Test
